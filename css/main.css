@@ -118,20 +118,59 @@ section .container {
     width: 20em;
 }
 
+.image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image::before {
+    content: "";
+    background-color: hsla(178, 97%, 36%, 0.705);
+    border-radius: 0.5em;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.image::after {
+    content: url(../images/icon-view.svg);
+    position: absolute;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.image:hover::before,
+.image:hover::after {
+    z-index: 1;
+}
+
 .image img {
     border-radius: 0.5em;
 }
 
 .box h1 {
+    width: fit-content;
     color: white;
     font-weight: 400;
     font-size: 1.3em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.box h1:hover {
+    color: var(--Cyan);
 }
 
 .box p {
     margin: 1em 0;
     color: var(--Soft-blue);
- line-height: 1.7;
+    line-height: 1.7;
 }
 
 .eth {
@@ -179,6 +218,11 @@ section .container {
 
 .creator span {
     color: white;
+}
+
+.creator span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
 }
 
 
