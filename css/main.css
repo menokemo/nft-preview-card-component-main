@@ -1,0 +1,198 @@
+/* Start variable's */
+
+ :root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --dark-blue-main-BG: hsl(217, 54%, 11%);
+    --dark-blue-card-BG: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+}
+
+
+/* End variable's */
+
+
+/* Start Global roles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* End Global roles */
+
+
+/*------ start components ------*/
+
+
+/*------ End components ------*/
+
+
+/* -------Start Media Queries------- */
+
+
+/* -----Small----- */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+/* Medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* Large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* -------End Media Queries------- */
+
+
+/* Start section */
+
+section {
+    background-color: var(--dark-blue-main-BG);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container {
+    padding: 5em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: var(--dark-blue-card-BG);
+    padding: 1.2em;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+}
+
+.image img {
+    border-radius: 0.5em;
+}
+
+.box h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.box p {
+    margin: 1em 0;
+    color: var(--Soft-blue);
+}
+
+.eth {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+    align-items: center;
+}
+
+.eth span:first-child {
+    color: var(--Cyan);
+    margin-left: 1em;
+    position: relative;
+}
+
+.eth span:first-child::before {
+    content: url(../images/icon-ethereum.svg);
+    position: absolute;
+    left: -1em;
+}
+
+.eth span:last-child {
+    color: var(--Soft-blue);
+    position: relative;
+}
+
+.eth span:last-child::before {
+    content: url(../images/icon-clock.svg);
+    position: absolute;
+    left: -1.2em;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: var(--dark-blue-line);
+    border-top: 0.1em solid var(--dark-blue-line);
+    padding: 0.9em 0;
+}
+
+.creator img {
+    width: 3em;
+}
+
+.creator span {
+    color: white;
+}
+
+
+/* End section */
+
+
+/* frontend mentor */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    margin-top: 1em;
+}
+
+.attribution a {
+    color: var(--Soft-blue);
+}
