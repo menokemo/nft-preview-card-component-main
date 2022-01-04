@@ -131,6 +131,7 @@ section .container {
 .box p {
     margin: 1em 0;
     color: var(--Soft-blue);
+ line-height: 1.7;
 }
 
 .eth {
